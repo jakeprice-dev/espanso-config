@@ -1,0 +1,28 @@
+# ****************************************************************************
+# Espanso: Email Shortcuts
+# ****************************************************************************
+
+name: email
+parent: default
+
+global_vars:
+  - name: short_name
+    type: echo
+    params:
+      echo: Jake
+
+matches:
+  - trigger: ":ta"
+    replace: |
+      Thanks,
+      {{short_name}}
+
+  - trigger: ":mt"
+    replace: |
+      Many thanks,
+      {{short_name}}
+
+  - trigger: ":br"
+    replace: |
+      Best regards,
+      {{short_name}}

@@ -1,0 +1,19 @@
+# ****************************************************************************
+# Espanso: Misc Shortcuts
+# ****************************************************************************
+
+name: misc
+parent: default
+
+matches:
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "dig @ns1.google.com TXT o-o.myaddr.l.google.com +short | sed 's/\"//g'"
+          shell: bash
+
+  - trigger: ":key"
+    replace: "-i ~/.ssh/"
