@@ -13,7 +13,7 @@ global_vars:
   - name: uuid
     type: shell
     params:
-      cmd: uuidgen
+      cmd: echo $(uuidgen) | awk '{print tolower($0)}'
       shell: bash
   - name: log_entry_timestamp_full
     type: date
@@ -27,6 +27,10 @@ global_vars:
     type: date
     params:
       format: "%Y-%m-%d"
+  - name: log_calendar_date
+    type: date
+    params:
+      format: "%Y-%m-%d %a"
   - name: log_bookmark_link
     type: clipboard
 
@@ -71,6 +75,8 @@ matches:
   # Dates
   - trigger: ":date"
     replace: "{{log_entry_date}}"
+  - trigger: ":caldate"
+    replace: "{{log_calendar_date}}"
 
   - trigger: ":bookmark"
     replace: |
