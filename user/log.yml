@@ -45,6 +45,7 @@ matches:
       date: {{log_entry_timestamp_full}}
       updated: 
       types: 
+      url: 
       pinned: false
       tags: []
       draft: false
@@ -61,10 +62,6 @@ matches:
 
       $|$
 
-  # Log - New Bookmark:
-  - trigger: ":link"
-    replace: "- {{log_entry_timestamp}} {{log_bookmark_link}}"
-
   # Log - Entry Admonition:
   - trigger: ":adm"
     replace: |
@@ -77,11 +74,4 @@ matches:
     replace: "{{log_entry_date}}"
   - trigger: ":caldate"
     replace: "{{log_calendar_date}}"
-
-  - trigger: ":bookmark"
-    replace: |
-      - title: "$|$"
-        url: 
-        tags: 
-        date: {{log_entry_date}}
 
