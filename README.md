@@ -21,7 +21,7 @@ After cloning the repository, follow the two steps below to install.
 
 ```sh
 # Remove existing config user directory:
-rm --recursive --force /home/jprice.config/espanso/user
+rm --recursive --force /home/jprice/config/espanso/user
 
 # Create symbolic link from repository to config directory:
 ln --symbolic <path-to-repo>/espanso/user /home/jprice/.config/espanso/user
