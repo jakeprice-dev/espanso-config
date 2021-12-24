@@ -69,6 +69,11 @@ matches:
       
       \{\{</admonition>\}\}
 
+  # Log - Embed HTML:
+  - trigger: ":embed"
+    replace: |
+      \{\{<embed_html file="$|$">\}\}
+
   # Dates
   - trigger: ":date"
     replace: "{{log_entry_date}}"
