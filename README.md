@@ -6,23 +6,34 @@
 
 I have a number of custom Espanso configurations in the `user/` directory.
 
-- `user/email.yml`
-    - Common email phrases.
-- `user/log.yml`
-    - Stuff for my personal log (personal journal, knowledge base, wiki).
-- `user/markdown.yml`
-    - Markdown syntax.
-- `user/misc.yml`
-    - Anything that doesn't fit in the above.
+| File           | Description                                 |
+|----------------|---------------------------------------------|
+| `email.yml`    | Common email phrases                        |
+| `log.yml`      | Personal log (wiki/knowledge base) snippets |
+| `markdown.yml` | Markdown syntax                             |
+| `misc.yml`     | Everything else                             |
+
 
 ## Install
 
 After cloning the repository, follow the two steps below to install.
 
+### Linux
+
 ```sh
 # Remove existing config user directory:
-rm --recursive --force /home/jprice/config/espanso/user
+rm --recursive --force /home/<username>/config/espanso/user
 
 # Create symbolic link from repository to config directory:
-ln --symbolic <path-to-repo>/espanso/user /home/jprice/.config/espanso/user
+ln --symbolic <path-to-repo>/espanso/user /home/<username>/.config/espanso/user
+```
+
+### MacOS
+
+```sh
+# Remove existing config user directory:
+rm --recursive --force /Users/<username>/Library/Preferences/espanso/user
+
+# Create symbolic link from repository to config directory:
+ln --symbolic <path-to-repo>/espanso/user /Users/<username>/Library/Preferences/espanso/user
 ```
