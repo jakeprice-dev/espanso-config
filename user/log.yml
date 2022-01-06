@@ -6,33 +6,37 @@ name: log
 parent: default
 
 global_vars:
+
   - name: log_entry_id
     type: date
     params:
       format: "%Y%m%d%H%M%S"
+
   - name: uuid
     type: shell
     params:
       cmd: echo $(uuidgen) | awk '{print tolower($0)}'
       shell: bash
+
   - name: log_entry_timestamp_full
     type: date
     params:
       format: "%Y-%m-%d %H:%M:%S"
+
   - name: log_entry_timestamp
     type: date
     params:
       format: "%Y-%m-%d %H:%M"
+
   - name: log_entry_date
     type: date
     params:
       format: "%Y-%m-%d"
+
   - name: log_calendar_date
     type: date
     params:
       format: "%Y-%m-%d %a"
-  - name: log_bookmark_link
-    type: clipboard
 
 matches:
   # Log - Entry Frontmatter:
@@ -62,6 +66,11 @@ matches:
 
       $|$
 
+  # Log - Table of Contents:
+  - trigger: ":toc"
+    replace: |
+      \{\{<toc>\}\}
+
   # Log - Entry Admonition:
   - trigger: ":adm"
     replace: |
@@ -73,6 +82,8 @@ matches:
   - trigger: ":embed"
     replace: |
       \{\{<embed_html file="$|$">\}\}
+
+
 
   # Dates
   - trigger: ":date"
