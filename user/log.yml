@@ -81,9 +81,7 @@ matches:
   # Log - Embed HTML:
   - trigger: ":embed"
     replace: |
-      \{\{<embed_html file="$|$">\}\}
-
-
+      \{\{<embed_html file="/attachments/$|$">\}\}
 
   # Dates
   - trigger: ":date"
