@@ -47,7 +47,7 @@ matches:
       uuid: {{uuid}}
       title: 
       date: {{log_entry_timestamp_full}}
-      updated: 
+      modified: {{log_entry_timestamp_full}}
       types: 
       link: 
       pinned: false
