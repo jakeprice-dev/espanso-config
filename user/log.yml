@@ -41,6 +41,7 @@ global_vars:
 matches:
   # Log - Entry Frontmatter:
   - trigger: ":fm"
+    force_clipboard: true
     replace: |
       ---
       id: {{log_entry_id}}
