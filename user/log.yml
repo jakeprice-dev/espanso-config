@@ -87,6 +87,8 @@ matches:
   # Dates
   - trigger: ":date"
     replace: "{{log_entry_date}}"
+  - trigger: ":fulldate"
+    replace: "{{log_entry_timestamp_full}}"
   - trigger: ":caldate"
     replace: "{{log_calendar_date}}"
 
