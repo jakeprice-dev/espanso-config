@@ -60,6 +60,7 @@ matches:
 
   # Log - Inbox Entry:
   - trigger: ":inbox"
+    force_clipboard: true
     replace: |
       ---
 
@@ -69,11 +70,13 @@ matches:
 
   # Log - Table of Contents:
   - trigger: ":toc"
+    force_clipboard: true
     replace: |
       \{\{<toc>\}\}
 
   # Log - Entry Admonition:
   - trigger: ":adm"
+    force_clipboard: true
     replace: |
       \{\{<admonition $|$>\}\}
       
@@ -81,14 +84,18 @@ matches:
 
   # Log - Embed HTML:
   - trigger: ":embed"
+    force_clipboard: true
     replace: |
       \{\{<embed_html file="/attachments/$|$">\}\}
 
   # Dates
   - trigger: ":date"
+    force_clipboard: true
     replace: "{{log_entry_date}}"
   - trigger: ":fulldate"
+    force_clipboard: true
     replace: "{{log_entry_timestamp_full}}"
   - trigger: ":caldate"
+    force_clipboard: true
     replace: "{{log_calendar_date}}"
 
