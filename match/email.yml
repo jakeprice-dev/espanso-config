@@ -2,9 +2,6 @@
 # Espanso: Email Shortcuts
 # ****************************************************************************
 
-name: email
-parent: default
-
 global_vars:
   - name: short_name
     type: echo

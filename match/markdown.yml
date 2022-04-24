@@ -2,9 +2,6 @@
 # Espanso: Markdown Shortcuts
 # ****************************************************************************
 
-name: markdown
-parent: default
-
 matches:
   - trigger: ":img"
     replace: "![]($|$)"

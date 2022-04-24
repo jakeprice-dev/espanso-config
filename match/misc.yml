@@ -2,9 +2,6 @@
 # Espanso: Misc Shortcuts
 # ****************************************************************************
 
-name: misc
-parent: default
-
 matches:
   - trigger: ":ip"
     replace: "{{output}}"

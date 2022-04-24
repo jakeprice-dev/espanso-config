@@ -2,9 +2,6 @@
 # Espanso: Personal Log Shortcuts
 # ****************************************************************************
 
-name: log
-parent: default
-
 global_vars:
 
   - name: log_entry_id
